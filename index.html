@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"
+      rel="stylesheet"
+    />
+    <title>the fun-guy collection 🍄</title>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="overlay"></div>
+      <h1 class="heading">Collect them all!</h1>
+      <div id="center_popup">
+        <div id="pop_up">
+          <h2 id="popup_text"></h2>
+          <button id="continue_button" class="button">Continue</button>
+        </div>
+      </div>
+      <div>
+        <!-- <img class="fungi" id="plankton" src="./images/plankton.png" /> -->
+        <button class="unbox" id="unbox-button">Unbox your fungi here!</button>
+      </div>
+
+      <!-- figure this out -->
+      <div>
+        <!-- from ai overview: -->
+
+        <input type="range" id="mySlider" min="1" max="100" value="72" />
+        <p>
+          Probability of pulling the secret 1/?: <span id="finalValue">72</span>
+        </p>
+        <!-- <p>Value while sliding (input event): <span id="liveValue">50</span></p> -->
+
+        <!-- <label for="secret-slider"
+          >Secret Probability: <span id="probability-value">0</span></label
+        >
+        <br />
+        <input type="range" id="secret-slider" min="0" max="180" value="" /> -->
+      </div>
+
+      <div class="scrollmenu fungi-inventory">
+        <img
+          class="creature"
+          id="one"
+          width="300"
+          height="300"
+          src="./images/img1.png"
+        />
+        <img
+          class="creature"
+          id="seaweed"
+          width="300"
+          height="300"
+          src="./images/img2.png"
+        />
+        <img
+          class="creature"
+          id="angler"
+          width="300"
+          height="300"
+          src="./images/img3.png"
+        />
+        <img
+          class="creature"
+          id="angel"
+          width="300"
+          height="300"
+          src="./images/img4.png"
+        />
+        <img
+          class="creature"
+          id="angel"
+          width="300"
+          height="300"
+          src="./images/secret.png"
+        />
+      </div>
+    </div>
+    <!-- scripts -->
+
+    <script src="https://chancejs.com/chance.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
