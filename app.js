@@ -17,9 +17,9 @@ let secretProbability;
 const fungiImages = [
   "./images/img1.png",
   "./images/img2.png",
-  // "./images/img3.png",
-  // "./images/img4.png",
-  // "./images/secret.png",
+  "./images/img3.png",
+  "./images/img4.png",
+  "./images/secret.png",
 ];
 
 const unboxedImages = [];
@@ -28,7 +28,10 @@ let hasCollectedAll = false;
 //set up random fungi selector - do it with the image
 let unboxFungiButton = document.querySelector("#present");
 unboxFungiButton.addEventListener("click", function () {
-  showPopup();
+  setTimeout(() => {
+    showPopup();
+    console.log("Delayed for 1 second.");
+  }, "1000");
 });
 
 // let unboxFungiButton = document.querySelector("#unbox-button");
@@ -77,7 +80,13 @@ const showPopup = () => {
   //choose random image using chance library
   // probability = 0.01612903225; - can work on making this a slider that the users can control to highlight the way that this mechanism works and how hard it really is to get the secrets
   // secretProbability = 1;
-  let randomFungi = chance.weighted(fungiImages, [1, secretProbability]);
+  let randomFungi = chance.weighted(fungiImages, [
+    1,
+    1,
+    1,
+    1,
+    secretProbability,
+  ]);
   console.log("this is random fungi:" + randomFungi);
 
   //figure out how to get this info on the server or how to do this on the server
