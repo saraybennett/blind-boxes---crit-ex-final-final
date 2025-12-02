@@ -25,11 +25,16 @@ const fungiImages = [
 const unboxedImages = [];
 let hasCollectedAll = false;
 
-//set up random fungi selector
-let unboxFungiButton = document.querySelector("#unbox-button");
+//set up random fungi selector - do it with the image
+let unboxFungiButton = document.querySelector("#present");
 unboxFungiButton.addEventListener("click", function () {
   showPopup();
 });
+
+// let unboxFungiButton = document.querySelector("#unbox-button");
+// unboxFungiButton.addEventListener("click", function () {
+//   showPopup();
+// });
 
 //handle the probability of pulling the secret - ai overview helped w/ this code
 

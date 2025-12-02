@@ -2,27 +2,27 @@
   background-color: lightskyblue;
 } */
 h1 {
-  font-family: "Rubik Puddles", system-ui;
+  /* font-family: "Rubik Puddles", system-ui; */
   font-weight: 400;
   font-size: 40px;
   font-style: normal;
   text-align: center;
 }
-
+/* 
 .heading {
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
-.unbox {
+/* .unbox {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
-}
+  z-index: 1;
+} */
 
 #overlay {
   visibility: hidden;
@@ -75,6 +75,40 @@ h1 {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.unbox-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.unbox-box {
+  animation: tilt-shaking 0.5s ease-in-out infinite;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.unbox-box:hover {
+  transform: scale(1.1) !important; /* Slightly enlarges on hover */
+  /* animation-play-state: paused; */
 }
 
 /* Basic styling for the slider track - not working, come back if i have time to do this*/
